@@ -9,3 +9,5 @@ factorization
     .is_prime(n): returns True if n is prime; otherwise false
     
     .factor(n): returns prime factorization of n
+    
+Yay
