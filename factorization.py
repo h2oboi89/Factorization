@@ -68,19 +68,21 @@ def factor(n):
     if n == 0 or n == 1:
         factors.append(n)
     else:
-        p_n = primes(n)
+        p_n = primes(math.ceil(math.sqrt(n)))
         
-        while not is_prime(n):
-            for p in p_n:
+        for p in p_n:
+            while True:
                 if n % p == 0:
                     factors.append(p)
                     
                     n = n // p
-                    
+                else:
                     break
-        
-        factors.append(n)
-        
-    factors.sort()
+            
+            if p > n:
+                break
+                
+        if len(factors) == 0:
+            factors.append(n)
     
     return factors
