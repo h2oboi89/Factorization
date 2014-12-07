@@ -1,10 +1,10 @@
 import unittest
 
-import sys, os
+import sys, os, math
 
 sys.path.insert(0, os.path.pardir)
 
-from test_base import ListTestCase
+from test_base_class import ListTestCase
 
 import factorization
 
