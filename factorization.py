@@ -31,16 +31,13 @@ def _primes(n, start, primes):
         while len(sieve) < n:
             sieve.append(True)
         
-        # take care of 1
-        sieve[0] = True
-        
         for p in primes:
             if p < n:
                 sieve[p] = True
     else:
         sieve = [True] * n
         
-    limit = int(math.sqrt(n)) + 1
+    limit = math.ceil(math.sqrt(n))
     
     for i in range(_INIT_START, limit, 2):        
         if sieve[i]:
