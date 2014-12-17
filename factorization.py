@@ -47,6 +47,9 @@ def _primes(n, start, primes):
 
 def is_prime(n):
     """ Returns true if n is prime; otherwise false """
+    if n < 2:
+        return False
+    
     for p in primes(n):
         if n == p:
             return True

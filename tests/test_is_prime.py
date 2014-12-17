@@ -9,6 +9,10 @@ from test_base_class import ListTestCase
 import factorization
         
 class IsPrimeTestCase(unittest.TestCase):
+    def test_negative(self):
+        self.assertFalse(factorization.is_prime(-1))
+        self.assertFalse(factorization.is_prime(0))
+        
     def test_to_ten(self):
         self.assertFalse(factorization.is_prime(1))
         self.assertTrue(factorization.is_prime(2))
