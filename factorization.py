@@ -45,6 +45,8 @@ def is_prime(n, prime_numbers = []):
         prime_numbers = _generate_primes(n + 1, prime_numbers)
 
     for p in prime_numbers:
+        if n < p:
+            return False
         if n == p:
             return True
 
