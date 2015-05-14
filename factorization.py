@@ -81,6 +81,9 @@ def factor(n, prime_numbers = []):
             if p > n:
                 break
 
+        if n != 1:
+            factors.append(n)
+
         if len(factors) == 0:
             factors.append(n)
 
